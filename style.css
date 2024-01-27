@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    background: olive;
+    background: linear-gradient(to bottom, white, teal);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@ body {
 }
 
 nav {
-    background-color: #333;
+    background-color: #1d569b;
     color: #fff;
     padding: 10px;
     width: 100%;
@@ -57,7 +57,7 @@ nav a {
 }
 
 header {
-    background-color: black;
+    background-color: teal;
     color: #fff;
     text-align: center;
     padding: 50px;
@@ -72,7 +72,7 @@ section {
 }
 
 footer {
-    background-color: #333;
+    background-color:  #1d569b;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -86,18 +86,10 @@ footer {
     }
 }
 header {
-    background-color: #423e3b; /* Darker brown header background color */
+    background-color: teal; /* Darker brown header background color */
     color: #fff;
     text-align: center;
     padding: 20px;
-    width: 100%;
-}
-
-footer {
-    background-color: #8b5d2e; /* Darker brown footer background color */
-    color: #fff;
-    text-align: center;
-    padding: 10px;
     width: 100%;
 }
 
@@ -124,7 +116,7 @@ main {
 
 }
 footer {
-    background-color: #333; /* Darker brown footer background color */
+    background-color:  #1d569b; /* Darker brown footer background color */
     color: #fff;
     text-align: center;
     padding: 10px;
