@@ -3,61 +3,21 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    background: white;
-    color: black;
+    background: black;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow: auto;
     width: 100%;
     height: 100%;
 }
+
 .para {
     text-align: justify;
 }
-@media only screen and (max-width: 600px) {
-    body {
-        font-size: 12px; /* Adjust fon size for smaller screens */
-    }
-    h1, h2 {
-        font-size: 1.5em;
-    }
-    p {
-        line-height: 1.4; /*Adjust the  line height for better readability */
-    }
-    /* Make text lighter on smaller screens */
-    body {
-        color: #000000;
-    }
-    /* Responsive styles for nav */
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav li {
-        margin: 10px 0;
-      }
-
-      /* Add a dropdown style for small screens */
-      nav ul {
-        display: none;
-        position: absolute;
-        background-color: #000000;
-        text-size-adjust: auto;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        z-index: 1; /* TTo make the dropdown appear in front */
-        width: 20%;
-        height: 100%;
-      }
-
-      nav ul li:hover > ul {
-        display: block;
-      }
-}
-
 nav {
     background-color: #000000;
     color: #fff;
@@ -66,9 +26,6 @@ nav {
     height: 20px;
 }
 
-.courses {
-    list-style-type: none;
-}
 nav ul {
     list-style: none;
     margin: 0;
@@ -76,84 +33,29 @@ nav ul {
     display: flex;
     justify-content: center;
 }
+
 li {
     margin: 0 15px;
 }
+
 nav a {
     text-decoration: none;
     color: #fff;
 }
-
-header {
-    background-color: #000000;
-    color: #fff;
-    text-align: center;
-    padding: 50px;
+section {
+    overflow: hidden;
+    margin-bottom: 100px;
 }
-
-main {
+main, .sec_main, .footer, .main {
     padding: 18px;
     text-align: center;
-    align-content: center;
-}
-section {
-    margin-bottom: 20px;
-}
-.button {
-    display: inline-block;
-    padding: 12px 18px;
-    font-size: 14px;
-    text-align: center;
-    text-decoration: none;
-    background-color: #000000;
-    color: #ffffff;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-    width: 255px;
-}
-.button:hover {
-    background-color: rgb(225, 219, 213);
-    color:#000000;
-}
-footer {
-    background-color:  #040507;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-}
-
-header {
-    background-color:#000000; /* Darker brown header background color */
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-}
-a {
-    color: #ffffff; /* Brown link color */
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-main {
     margin-top: 10%;
     margin-left: 10%;
-    text-align: center;
-    padding: 20px;
     flex-grow: 1; /* Allow the main content to grow and fill the remaining space */
-
 }
-.sec_main {
-    margin-top: 5%;
-    text-align: center;
-    padding: 20px;
-    flex-grow: 1; /* Allow the main content to grow and fill the remaining space */
 
-}
 footer {
-    background-color:  #000000; /* Darker brown footer background color */
+    background-color:  #040507; /* Darker brown footer background color */
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -161,7 +63,7 @@ footer {
 }
 
 a {
-    color: #4c2b0d; /* Brown link color */
+    color: #ffffff; /* Brown link color */
     text-decoration: none;
 }
 
@@ -173,4 +75,88 @@ a:hover {
 .contact-link {
     color: #fff; /* Match the color of other text in the footer */
     font-weight: bold;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+}
+
+.card h2 {
+    color: #333;
+}
+
+.card p {
+    color: #666;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+}
+/* section that has the image */
+section .content {
+    display: flex;
+    align-items: center;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+/* my image */
+ .image {
+    border-radius: 50%; /* Add rounded edges */
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+/* Add margin between icons */
+i {
+    margin-right: 10px; /* Adjust the value as needed */
+  }
+  
+/* how it should be dispalyed on smaller screens */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 12px; /* Adjust font size for smaller screens */
+        color: #000000; /* Make text lighter on smaller screens */
+    }
+    
+    h1, h2 {
+        font-size: 1.5em;
+    }
+    
+    p {
+        line-height: 1.4; /* Adjust the line height for better readability */
+    }
+    
+    /* Responsive styles for nav */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        position: absolute;
+        background-color: #000000;
+        text-size-adjust: auto;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 1; /* To make the dropdown appear in front */
+        width: 20%;
+        height: 100%;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    nav ul li:hover > ul {
+        display: block;
+    }
 }
