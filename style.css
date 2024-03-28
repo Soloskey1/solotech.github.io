@@ -2,8 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 16px;
-    background: black;
+    font-size: 16.5px;
+    font-weight: 200;
+    background: brown;
     color: white;
     display: flex;
     flex-direction: column;
@@ -15,11 +16,15 @@ body {
     height: 100%;
 }
 
-.para {
-    text-align: justify;
+p {
+    text-align: justify;  /* justify paragraph */
+}
+/* center specific paragraphs */
+.center {
+    text-align: center;
 }
 nav {
-    background-color: #000000;
+    background-color: #450b0b;
     color: #fff;
     padding: 10px;
     width: 100%;
@@ -31,7 +36,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 li {
@@ -55,7 +60,7 @@ main, .sec_main, .footer, .main {
 }
 
 footer {
-    background-color:  #040507; /* Darker brown footer background color */
+    background-color: #450b0b; /* Darker brown footer background color */
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -75,17 +80,6 @@ a:hover {
 .contact-link {
     color: #fff; /* Match the color of other text in the footer */
     font-weight: bold;
-}
-
-.card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 16px;
-    max-width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: 0.2s;
 }
 
 /* section that has the image */
@@ -111,11 +105,24 @@ section .content {
 i {
     margin-right: 10px; /* Adjust the value as needed */
   }
-  
+  /* container for '.restrict' */
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+  }
+/* to restrict the about_me section */
+.restrict {
+    float: right;
+    width 700px;
+    width: 700px;
+    margin-left: 20px;
+    overflow: auto;
+}
 /* how it should be dispalyed on smaller screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     body {
-        font-size: 12px; /* Adjust font size for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
         color: #000000; /* Make text lighter on smaller screens */
     }
     
@@ -124,7 +131,7 @@ i {
     }
     
     p {
-        line-height: 1.4; /* Adjust the line height for better readability */
+        font-size: 0.9em; /* Adjust font suze for better readability */
     }
     
     /* Responsive styles for nav */
@@ -147,5 +154,15 @@ i {
 
     nav ul li:hover > ul {
         display: block;
+    }
+}
+
+/* adjustments for smaller screens */
+media only screen and (max-width: 768px) {
+    body {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+    p {
+        font-size: 0.8em;
     }
 }
