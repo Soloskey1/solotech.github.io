@@ -1,0 +1,272 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Primary font */
+    margin: 0;
+    padding: 0;
+    font-size: 15px; /* Smaller font size */
+    font-weight: 200;
+    background: #001f3f; /* Dark blue background */
+    color: #f5f5f5; /* Light text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: auto;
+    width: 100%;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif; /* Fancy font for headings */
+    color: #ffd700; /* Gold color for headings */
+}
+
+p {
+    text-align: justify; /* Justify paragraph text */
+}
+
+/* Center specific paragraphs */
+.center {
+    text-align: center;
+}
+
+nav {
+    background-color: #000000; /* Dark green nav background */
+    color: #fff;
+    padding: 15px;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffd700; /* Gold links */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+main {
+    padding: 18px;
+    text-align: center;
+    margin-top: 5%;
+    flex-grow: 1; /* Allow the main content to grow and fill the remaining space */
+}
+
+footer {
+    background-color: black; /* Dark green footer background */
+    color: #f5f5f5; /* Light footer text */
+    padding: 20px; /* More padding for better appearance */
+    width: 100%; /* Full width footer */
+    text-align: center;
+}
+
+a {
+    color: #ffd700; /* Gold link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Additional Style for the Contact Link in the Footer */
+.contact-link {
+    color: #ffd700; /* Gold link color */
+    font-weight: bold;
+}
+
+/* Section that has the image */
+section .content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items */
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* My image */
+.image {
+    border-radius: 70px; /* Add rounded edges */
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Light shadow effect */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+/* Button next to the image */
+.image-button {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Inner spacing */
+    margin-left: 20px; /* Space between image and button */
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.image-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Add margin between icons */
+i {
+    margin-right: 10px; /* Adjust the value as needed */
+}
+
+/* Container for '.restrict' */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+}
+
+/* To restrict the about_me section */
+.restrict {
+    width: 900px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 13px; /* Further adjust font size for smaller screens */
+    }
+    
+    h1, h2 {
+        font-size: 1.3em; /* Smaller headings */
+    }
+    
+    p {
+        font-size: 0.9em; /* Adjust font size for better readability */
+    }
+    
+    /* Responsive styles for nav */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Initially hidden for mobile */
+        background-color: #004d00; /* Dark green background */
+        width: 100%; /* Full width */
+    }
+
+    nav ul.active {
+        display: flex; /* Show when active */
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}
+
+/* Image Slides */
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Easing for smoother transitions */
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff; /* White text for contrast */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px; /* Add margin for spacing */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Textarea */
+textarea {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Max width for larger screens */
+    height: 80px; /* Fixed height */
+    padding: 10px; /* Inner padding */
+    margin: 10px 0; /* Margin for spacing */
+    border: 1px solid #555; /* Dark border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Smaller font size */
+    resize: none; /* Disable resizing */
+    background-color: #3d3d3d; /* Dark background for textarea */
+    color: #f5f5f5; /* Light text color */
+}
+
+/* Footer button */
+button {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Inner spacing */
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.contact-link {
+    color: #ffd700; /* Gold link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
